@@ -10,7 +10,7 @@ public class Mintah {
         
         System.out.print("Enter assessment score: ");
         assessmentScore = input.nextInt();
-        
+
         System.out.print("Enter amount paid (should be 100 for full payment): ");
         feePaid = input.nextInt();
         

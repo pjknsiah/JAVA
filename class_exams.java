@@ -30,7 +30,7 @@ public class class_exams {
         String[]cert=new String[n];
         double [] fees=new double[n];
         boolean[]rec=new boolean[n];
-        
+
         int a=0;
         		while (a<n)
         		{
