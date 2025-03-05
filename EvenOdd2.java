@@ -22,9 +22,11 @@ public class EvenOdd2{
 
         int evenPOTD = productOfTrailingDiagonal(even);
         int oddPOTD = productOfTrailingDiagonal(odd);
-        
-        System.out.println("The difference of the product of the trailing and leading diagonals of the even array is: " + (evenPOTD - evenPOLD));
-        System.out.println("The difference of the product of the trailing and leading diagonals of the odd array is: " + (oddPOTD - oddPOLD));
+
+        System.out.println("\nThe difference of the products of the trailing and leading diagonals of the even array is: " + (evenPOTD - evenPOLD));
+        System.out.println("The difference of the products of the trailing and leading diagonals of the odd array is: " + (oddPOTD - oddPOLD));
+
+        System.out.println("\nThe difference between the products of the trailing diagonals of the odd and even arrays is: " + (oddPOTD - evenPOTD));
     }
     public static int productOfLeadingDiagonal(int[][] array){
         int product = 1;
