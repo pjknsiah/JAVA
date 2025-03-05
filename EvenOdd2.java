@@ -23,11 +23,7 @@ public class EvenOdd2{
     public static void productOfLeadingDiagonal(int[][] array){
         int product = 1;
         for (int i = 0; i < 3; i++){
-            for (int j = 0; j < 3; j++){
-                if (i == j){
-                    product *= array[i][j];
-                }
-            }
+            product *= array[i][i];
         }
         System.out.println(product);
     }
