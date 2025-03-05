@@ -14,19 +14,21 @@ public class EvenOdd2{
                 oddIndex++;
             }
         }
-        System.out.println("Odd Numbers Array:");
-        printArray(odd);
+        System.out.print("The product of the leading diagonal of the even array is: ");
+        productOfLeadingDiagonal(even);
 
-        System.out.println("Even Numbers Array:");
-        printArray(even);
-
+        System.out.print("The product of the leading diagonal of the odd array is: ");
+        productOfLeadingDiagonal(odd);
     }
-    public static void printArray(int[][] array){
+    public static void productOfLeadingDiagonal(int[][] array){
+        int product = 1;
         for (int i = 0; i < 3; i++){
             for (int j = 0; j < 3; j++){
-                System.out.print(array[i][j] + "\t");
+                if (i == j){
+                    product *= array[i][j];
+                }
             }
-            System.out.println();
         }
+        System.out.println(product);
     }
 }
