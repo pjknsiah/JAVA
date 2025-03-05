@@ -14,17 +14,30 @@ public class EvenOdd2{
                 oddIndex++;
             }
         }
-        System.out.print("The product of the leading diagonal of the even array is: ");
-        productOfLeadingDiagonal(even);
+        int evenPOLD = productOfLeadingDiagonal(even);
+        System.out.println("The product of the leading diagonal of the even array is: " + evenPOLD);
 
-        System.out.print("The product of the leading diagonal of the odd array is: ");
-        productOfLeadingDiagonal(odd);
+        int oddPOLD = productOfLeadingDiagonal(odd);
+        System.out.println("The product of the leading diagonal of the odd array is: " + oddPOLD);
+
+        int evenPOTD = productOfTrailingDiagonal(even);
+        int oddPOTD = productOfTrailingDiagonal(odd);
+        
+        System.out.println("The difference of the product of the trailing and leading diagonals of the even array is: " + (evenPOTD - evenPOLD));
+        System.out.println("The difference of the product of the trailing and leading diagonals of the odd array is: " + (oddPOTD - oddPOLD));
     }
-    public static void productOfLeadingDiagonal(int[][] array){
+    public static int productOfLeadingDiagonal(int[][] array){
         int product = 1;
         for (int i = 0; i < 3; i++){
             product *= array[i][i];
         }
-        System.out.println(product);
+        return product;
+    }
+    public static int productOfTrailingDiagonal(int[][] array){
+        int product = 1;
+        for (int i = 2; i >=0; i--){
+            product *= array[i][2 - i];
+        }
+        return product;
     }
 }
